@@ -1,13 +1,97 @@
+<!doctype html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Iván Salas — Portafolio</title>
-  <meta name="description" content="Portafolio de Iván Salas: proyectos, skills, contacto y experiencia." />
-  <meta property="og:title" content="Iván Salas — Portafolio" />
-  <meta property="og:description" content="Proyectos, skills y contacto." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0ea5e9" />
-
-  <!-- Estilos del sitio -->
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="./assets/styles.css">
 </head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Iván Salas</span>
+      </div>
+      <nav class="links" aria-label="principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="wrap">
+    <section class="hero" aria-label="presentación">
+      <div>
+        <span class="tag"><span class="dot" aria-hidden="true"></span> Software + Redes • UBB</span>
+        <h1>Hola, soy Iván.<br>Éste es mi portafolio.</h1>
+        <p class="lead">Si ves este texto, todo está bien. Debajo hay tarjetas de ejemplo.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="mailto:ivan.salas@example.com">Contáctame</a>
+        </div>
+      </div>
+      <div class="profile" role="img" aria-label="Retrato decorativo"></div>
+    </section>
+
+    <section id="proyectos" aria-labelledby="pro-title">
+      <div class="section-title">
+        <span class="bar" aria-hidden="true"></span>
+        <h2 id="pro-title">Proyectos destacados</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Full-stack</span>
+          <h3>CCAA UBB — Tesorería</h3>
+          <p>Módulo con PostgreSQL, reportes PDF y roles.</p>
+          <div class="pillz"><span class="pill">Node</span><span class="pill">React</span><span class="pill">PostgreSQL</span></div>
+        </article>
+        <article class="card">
+          <span class="badge">DevOps</span>
+          <h3>GitHub Pages CI</h3>
+          <p>Despliegue automático con Actions.</p>
+          <div class="pillz"><span class="pill">CI/CD</span><span class="pill">Actions</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre-mi" aria-labelledby="about-title">
+      <div class="section-title">
+        <span class="bar" aria-hidden="true"></span>
+        <h2 id="about-title">Sobre mí</h2>
+      </div>
+      <div class="about">
+        <p>Ingeniería de Software UBB. Web (PERN) + sistemas/redes (Linux, Nagios, Apache/MariaDB).</p>
+        <div class="skills">
+          <span class="skill">React</span><span class="skill alt">Expo/RN</span>
+          <span class="skill">Node</span><span class="skill">Express</span>
+          <span class="skill alt">PostgreSQL</span><span class="skill">GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contact-title">
+      <div class="section-title">
+        <span class="bar" aria-hidden="true"></span>
+        <h2 id="contact-title">Contacto</h2>
+      </div>
+      <div class="grid">
+        <div class="card" style="grid-column: span 12">
+          <p>¿Tienes una idea? Conversemos.</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:ivan.salas@example.com">Email</a>
+            <a class="btn" href="https://github.com/IVanckyS" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y"></span> Iván Salas — HTML + CSS puro</div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
